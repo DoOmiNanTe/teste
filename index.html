@@ -5,195 +5,220 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Plano Turbo 10 Dias - Mulher em Forma</title>
   <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
       font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
       background: #fff8f2;
       color: #333;
+      line-height: 1.6;
+      padding: 0 1rem;
     }
     header {
       background-color: #ff69b4;
       color: white;
       text-align: center;
-      padding: 2rem;
+      padding: 2rem 1rem;
+      border-radius: 0 0 20px 20px;
     }
     section {
-      padding: 2rem;
-      max-width: 800px;
-      margin: 0 auto;
+      max-width: 500px;
+      margin: 2rem auto;
     }
-    h1, h2, h3 {
-      color: #000000;
-    }
-    .benefits, .testimonials, .visual-proofs {
+    h1, h2, h3 { color: #000; margin-bottom: 1rem; }
+    p, ul { margin-bottom: 1rem; }
+    ul { list-style: none; padding-left: 0; }
+    ul li { margin-bottom: 0.5rem; padding-left: 1.5rem; position: relative; }
+    ul li::before { content: '✅'; position: absolute; left: 0; }
+    .benefits, .testimonials, .visual-proofs, .faq {
       background-color: #fff0f5;
       border-radius: 10px;
       padding: 1.5rem;
-      margin-top: 1rem;
+      margin-top: 1.5rem;
     }
     .button {
       display: block;
-      width: fit-content;
+      width: 100%;
       background: #ff1493;
       color: white;
-      padding: 1rem 2rem;
+      padding: 1.2rem;
       text-align: center;
       text-decoration: none;
       font-size: 1.2rem;
-      border-radius: 8px;
-      margin: 2rem auto;
-      transition: 0.3s;
+      font-weight: bold;
+      border-radius: 10px;
+      margin: 2rem 0 1rem;
+      transition: background 0.3s;
+      animation: pulse 1.5s infinite;
     }
-    .button:hover {
-      background: #e01382;
+    .button:hover { background: #e01382; }
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
     }
-    .fb-comment {
-      border-top: 1px solid #ccc;
-      margin-top: 1rem;
-      padding-top: 1rem;
-      display: flex;
-      align-items: flex-start;
-    }
+    .fb-comment { display: flex; align-items: flex-start; margin-top: 1rem; }
     .fb-avatar {
       width: 40px;
       height: 40px;
       border-radius: 50%;
       margin-right: 10px;
+      flex-shrink: 0;
     }
-    .fb-comment-content {
-      flex: 1;
-    }
-    .fb-comment-content p.name {
-      font-weight: bold;
-      margin-bottom: 0.3rem;
-    }
-    .fb-comment-content p.text {
-      margin: 0 0 0.5rem 0;
-    }
-    .fb-reactions {
-      font-size: 0.9rem;
-      color: #666;
-    }
-    .before-after-imgs {
-      display: flex;
-      
-      gap: 1rem;
-      justify-content: center;
-      
-    }
-    .before-after-imgs img {
-      width: 150px;
-      height: 250px;
+    .fb-comment-content { flex: 1; }
+    .fb-comment-content p.name { font-weight: bold; margin-bottom: 0.2rem; }
+    .fb-reactions { font-size: 0.85rem; color: #666; }
+    .slider {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      max-width: 100%;
       border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      margin: 1rem auto 0;
     }
-    .caption {
-      font-size: 0.9rem;
+    .slides { display: flex; transition: transform 0.5s ease-in-out; width: 100%; }
+    .slides img { width: 100%; flex-shrink: 0; border-radius: 10px; }
+    .caption { font-size: 0.9rem; text-align: center; margin-top: 0.5rem; color: #555; }
+    .small-text { font-size: 0.9rem; text-align: center; color: #555; margin-top: 1rem; }
+    .highlight {
+      background: #fff0f5;
+      padding: 1rem;
+      border-radius: 10px;
       text-align: center;
-      margin-top: 0.5rem;
+      margin: 2rem 0;
+      font-weight: bold;
     }
-    .a {font-size: 130%;
-      
-
+    .faq h3 {
+      color: #ff69b4;
+      margin-top: 2rem;
+    }
+    .faq ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    .faq li {
+      margin-bottom: 1rem;
+      padding-left: 1.5rem;
+      position: relative;
+    }
+    .faq li::before {
+      content: '❓';
+      position: absolute;
+      left: 0;
+      color: #ff69b4;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>🔥 Emagreça Até 15KG em Apenas 10 Dias!</h1>
-    <p>Sem Academia, Sem Remédios e Sem Passar Fome</p>
-  </header>
 
-  <section>
-    <h2>Você merece se sentir bem no espelho!</h2>
-    <p>Se você já tentou de tudo e ainda não conseguiu emagrecer, esse plano foi feito para você.</p>
+<header>
+  <h1>🔥 Transforme seu Corpo em 10 Dias!</h1>
+  <p>Sem Academia, Sem Remédios e Sem Passar Fome</p>
+</header>
 
-    <div class="benefits">
-      <h3>Você vai receber:</h3>
-      <ul>
-        <li>✅ Cardápio Turbo de 10 dias</li>
-        <li>✅ Lista dos alimentos que secam gordura 24h</li>
-        <li>✅ Receita da “Água Seca Barriga”</li>
-        <li>✅ Bônus: Vídeo “Como nunca mais engordar”</li>
-        <li>✅ Acesso imediato no celular</li>
-      </ul>
-    </div>
+<section>
+  <h2>Transforme seu corpo e sua autoestima!</h2>
+  <p>Chega de dietas malucas que não funcionam. Com nosso Plano Turbo, você vai secar gordura de forma saudável, prática e rápida!</p>
 
-    <h2>💰 Tudo isso por apenas <strong>R$14,90</strong>!</h2>
-    <div class="a"><p>(Menos do que um lanche e muito mais saudável 😉)</p>
-    </div>
+  <div class="benefits">
+    <h3>Ao adquirir, você recebe:</h3>
+    <ul>
+      <li>✅ Cardápio Turbo 10 Dias (R$97)</li>
+      <li>✅ Lista de alimentos que secam gordura 24h (R$37)</li>
+      <li>✅ Receita da "Água Seca Barriga" (R$27)</li>
+      <li>✅ Bônus exclusivo: Vídeo "Como Nunca Mais Engordar" (R$47)</li>
+      <li>✅ Novo Bônus Surpresa: Receitas Fit para Secar (R$37)</li>
+      <li>✅ Acesso imediato no celular</li>
+    </ul>
+  </div>
 
-    <div class="testimonials">
-      <h3>💬 Depoimentos reais:</h3>
+  <div class="highlight">
+    Todo esse pacote de R$245<br>
+    por apenas <strong style="color: #e60073;">R$14,90!</strong><br><br>
+    🎁 + Bônus Surpresa liberado automaticamente!
+  </div>
 
-      <div class="fb-comment">
-        <img src="https://randomuser.me/api/portraits/women/1.jpg" class="fb-avatar" alt="Juliana Mendes">
-        <div class="fb-comment-content">
-          <p class="name">Juliana Mendes</p>
-          <p class="text">Gente, é real! Eu perdi 7kg em 8 dias e sem passar fome 😍</p>
-          <p class="fb-reactions">👍 ❤️ 35 · Responder</p>
-        </div>
-      </div>
+  <p class="small-text">(Menos que um lanche por uma vida mais leve e feliz! 😉)</p>
 
-      <div class="fb-comment">
-        <img src="https://randomuser.me/api/portraits/women/2.jpg" class="fb-avatar" alt="Tatiane Oliveira">
-        <div class="fb-comment-content">
-          <p class="name">Tatiane Oliveira</p>
-          <p class="text">Achei que era mais uma enganação, mas FUNCIONA mesmo! Tô chocada 👏</p>
-          <p class="fb-reactions">❤️ 😮 48 · Responder</p>
-        </div>
-      </div>
+  <div class="testimonials">
+    <h3>💬 Histórias reais de transformação:</h3>
 
-      <div class="fb-comment">
-        <img src="https://randomuser.me/api/portraits/women/3.jpg" class="fb-avatar" alt="Fernanda Lima">
-        <div class="fb-comment-content">
-          <p class="name">Fernanda Lima</p>
-          <p class="text">Vale cada centavo! Voltei a usar minhas roupas de antes da gravidez 🥹❤️</p>
-          <p class="fb-reactions">👍 ❤️ 63 · Responder</p>
-        </div>
-      </div>
-
-      <div class="fb-comment">
-        <img src="https://randomuser.me/api/portraits/women/4.jpg" class="fb-avatar" alt="Ana Paula Souza">
-        <div class="fb-comment-content">
-          <p class="name">Ana Paula Souza</p>
-          <p class="text">Tô no 6º dia e já se foram 5kg. Nunca foi tão fácil!</p>
-          <p class="fb-reactions">❤️ 🔥 22 · Responder</p>
-        </div>
+    <div class="fb-comment">
+      <img src="https://randomuser.me/api/portraits/women/1.jpg" class="fb-avatar" alt="Juliana Mendes">
+      <div class="fb-comment-content">
+        <p class="name">Juliana Mendes</p>
+        <p>"Eu já tinha tentado de tudo: academia, dietas malucas... nada funcionava! Com o Plano Turbo, perdi 7kg em 8 dias, sem passar fome e comendo coisas deliciosas! Hoje me sinto renovada!"</p>
+        <p class="fb-reactions">👍❤️ 87 · Responder</p>
       </div>
     </div>
 
-    <div class="visual-proofs">
-      <h3>📸 Antes e Depois das Alunas:</h3>
-      <div class="before-after-imgs">
-        <div>
-          <img src="img/ju-antes.jpg" alt="Antes">
-          <div class="caption">Juliana - 9kg em 8 dias</div>
-        </div>
-        <div>
-          <img src="img/ju-depois.jpg" alt="Depois">
-          <div class="caption">Juliana - Depois</div>
-        </div>
-        <div>
-          <img src="img/fer-antes.jpg" alt="Antes">
-          <div class="caption">Fernanda - 8kg em 10 dias</div>
-        </div>
-        <div>
-          <img src="img/fer-depois.jpg" alt="Depois">
-          <div class="caption">Fernanda - Depois</div>
-        </div>
+    <div class="fb-comment">
+      <img src="https://randomuser.me/api/portraits/women/2.jpg" class="fb-avatar" alt="Tatiane Oliveira">
+      <div class="fb-comment-content">
+        <p class="name">Tatiane Oliveira</p>
+        <p>"Achei que seria mais uma promessa falsa, mas FUNCIONOU! Em 6 dias, vi meu corpo desinchar e já eliminei 5kg. Melhor decisão que tomei para minha saúde!"</p>
+        <p class="fb-reactions">❤️😮 102 · Responder</p>
       </div>
     </div>
 
-    <h3>🛡️ Garantia total por 7 dias:</h3>
-    <p>Se você não tiver resultados, devolvemos seu dinheiro. Sem riscos!</p>
+    <div class="fb-comment">
+      <img src="https://randomuser.me/api/portraits/women/3.jpg" class="fb-avatar" alt="Fernanda Lima">
+      <div class="fb-comment-content">
+        <p class="name">Fernanda Lima</p>
+        <p>"Depois da gravidez, achava que nunca mais teria meu corpo de volta. Em apenas 10 dias com o Plano Turbo, perdi 8kg! Me sinto linda e cheia de energia novamente!"</p>
+        <p class="fb-reactions">👍❤️🔥 143 · Responder</p>
+      </div>
+    </div>
 
-    <h3>⏳ Oferta por tempo LIMITADO!</h3>
-    <p>Depois volta ao preço original de R$47. Aproveite agora!</p>
+  </div>
 
-    <a href="https://pay.kirvano.com/3d6bc446-4a0a-4d36-8ba0-d88de1c7b339" class="button">QUERO EMAGRECER AGORA POR R$14,90</a>
-    <p style="text-align: center;">Pagamento 100% seguro | Acesso imediato</p>
-  </section>
+  <div class="visual-proofs">
+    <h3>📸 Antes e Depois:</h3>
+    <div class="slider">
+      <div class="slides">
+        <img src="img/ju-antes.jpg" alt="Juliana Antes">
+        <img src="img/ju-depois.jpg" alt="Juliana Depois">
+        <img src="img/fer-antes.jpg" alt="Fernanda Antes">
+        <img src="img/fer-depois.jpg" alt="Fernanda Depois">
+      </div>
+    </div>
+    <div class="caption">Resultados reais das nossas alunas! 🌟</div>
+  </div>
+
+  <h3>🛡️ Garantia Incondicional:</h3>
+  <p>Experimente por 7 dias. Se não amar os resultados, devolvemos 100% do seu dinheiro. Simples assim!</p>
+
+  <div class="highlight">
+    ⏳ **Oferta EXTREMAMENTE LIMITADA!**<br>
+    Últimas unidades com bônus liberado! Garanta o corpo dos seus sonhos agora!
+  </div>
+
+  <div class="faq">
+    <h3>Dúvidas Frequentes</h3>
+    <ul>
+      <li><strong>O plano é adequado para qualquer tipo de pessoa?</strong><br>Sim! O Plano Turbo foi feito para todos os tipos de corpo e estilos de vida. Seja você iniciante ou avançado, o plano é simples de seguir e adaptável.</li>
+      <li><strong>O que fazer se eu tiver alergias alimentares?</strong><br>Nosso cardápio tem opções variadas. Caso tenha alergia a algum alimento, você pode facilmente substituir por outros recomendados.</li>
+      <li><strong>Eu sou iniciante, o plano é difícil?</strong><br>Não! O plano é simples de seguir, com refeições deliciosas e de fácil preparo. Não precisa de habilidades culinárias avançadas.</li>
+    </ul>
+  </div>
+
+  <a href="https://pay.kirvano.com/3d6bc446-4a0a-4d36-8ba0-d88de1c7b339" class="button">👉 Quero Emagrecer Agora!</a>
+
+  <p class="small-text">Pagamento 100% seguro | Acesso imediato após a compra</p>
+</section>
+
+<script>
+let slideIndex = 0;
+const slides = document.querySelector('.slides');
+const totalSlides = slides.children.length;
+
+function showSlides() {
+  slideIndex++;
+  if (slideIndex >= totalSlides) { slideIndex = 0; }
+  slides.style.transform = 'translateX(' + (-slideIndex * 100) + '%)';
+}
+
+setInterval(showSlides, 3000);
+</script>
+
 </body>
 </html>
